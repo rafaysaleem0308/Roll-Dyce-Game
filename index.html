@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Roll-Dyce Game</title>
+  </head>
+  <body>
+    <main class="main-content">
+      <section class="player player--0 player--active">
+        <h2 class="name" id="name--0">Player 1</h2>
+        <p class="score" id="score--0">0</p>
+        <div class="current">
+          <p class="current-label">Current</p>
+          <p class="current-score" id="current--0">0</p>
+        </div>
+      </section>
+      <section class="player player--1">
+        <h2 class="name" id="name--1">Player 2</h2>
+        <p class="score" id="score--1">0</p>
+        <div class="current">
+          <p class="current-label">Current</p>
+          <p class="current-score" id="current--1">0</p>
+        </div>
+      </section>
+
+      <img src="dice-5.png" alt="Playing dice" class="dice hidden" />
+      <button class="btn btn--new">🔄 New game</button>
+      <button class="btn btn--info">INFO</button>
+      <button class="btn btn--roll">🎲 Roll dice</button>
+      <button class="btn btn--hold">📥 Hold</button>
+    </main>
+
+    <!-- Modal for game instructions -->
+    <div class="modal hidden">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Game Instructions</h2>
+        <p>
+          <strong
+            >Welcome to the Roll-Dyce Game! Here are the instructions to
+            play:</strong
+          >
+        </p>
+        <ol>
+          <li>
+            <strong>Starting the Game:</strong>
+            <ul>
+              <li>
+                Click on the <strong>New game</strong> button to reset the game
+                and start afresh.
+              </li>
+            </ul>
+          </li>
+          <br />
+          <li>
+            <strong>Rolling the Dice:</strong>
+            <ul>
+              <li>
+                Click the <strong>Roll dice</strong> button to roll the dice.
+              </li>
+              <li>The result of the dice roll will be displayed.</li>
+              <li>
+                If you roll a number other than 1, it will be added to your
+                current score.
+              </li>
+
+              <li>
+                If you roll a 1, your current score will reset to 0 and it will
+                be the next player's turn. But your
+                <strong>Previous Score will not get zero</strong>
+              </li>
+            </ul>
+          </li>
+          <br />
+          <li>
+            <strong>Holding Your Score:</strong>
+            <ul>
+              <li>
+                Click the <strong>Hold</strong> button to add your current score
+                to your total score.
+              </li>
+              <li>After holding, it will be the next player's turn.</li>
+              <li>
+                If your total score reaches 100 or more, you win the game.
+              </li>
+              <li>
+                Using the hold button is strategic. If you roll a 1, your
+                current score will reset to 0, so hold your score to save it and
+                avoid this risk.
+              </li>
+            </ul>
+          </li>
+          <br />
+          <li>
+            <strong>Winning the Game:</strong>
+            <ul>
+              <li>
+                The first player to reach a total score of 100 or more wins the
+                game.
+              </li>
+              <li>The winning player will be highlighted.</li>
+            </ul>
+          </li>
+          <br />
+          <li>
+            <strong>Additional Rules:</strong>
+            <ul>
+              <li>
+                The game alternates between the two players after each roll of 1
+                or hold action.
+              </li>
+
+              <li>
+                The dice image will be hidden at the start of the game and after
+                each roll.
+              </li>
+            </ul>
+          </li>
+          <br />
+        </ol>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
